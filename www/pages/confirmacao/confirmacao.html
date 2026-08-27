@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pedido Confirmado</title>
+
+    <link rel="stylesheet" href="confirmacao.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>🛍️ Meu App Ecommerce</h1>
+
+    </header>
+
+    <main>
+
+        <section class="confirmacao">
+
+            <div class="icone-confirmacao">
+                ✅
+            </div>
+
+            <h2>Pedido confirmado!</h2>
+
+            <p>
+                Obrigado pela sua compra!
+            </p>
+
+            <p>
+                Seu pedido foi recebido com sucesso.
+            </p>
+
+            <div class="dados-cliente">
+
+    <h3>Dados do cliente</h3>
+
+    <p id="nome-cliente"></p>
+
+    <p id="email-cliente"></p>
+
+    <p id="telefone-cliente"></p>
+
+</div>
+
+            <div class="resumo-pedido">
+
+                <h3>Resumo do pedido</h3>
+
+                <div id="produtos-pedido">
+                </div>
+
+                <div id="total-pedido">
+                </div>
+
+            </div>
+
+            <button onclick="voltarParaHome()">
+                Voltar para a loja
+            </button>
+
+        </section>
+
+    </main>
+
+    <script src="confirmacao.js"></script>
+
+</body>
+
+</html>

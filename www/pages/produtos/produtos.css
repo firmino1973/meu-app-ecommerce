@@ -1,0 +1,183 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    color: #222;
+}
+
+
+/* ==============================
+   CABEÇALHO
+============================== */
+
+.cabecalho {
+    height: 70px;
+    background: #2563EB;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 20px;
+}
+
+.cabecalho h1 {
+    margin: 0;
+    font-size: 20px;
+}
+
+
+/* BOTÃO VOLTAR */
+
+.voltar {
+    background: none;
+    border: none;
+
+    color: white;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+
+/* ==============================
+   CARRINHO
+============================== */
+
+.carrinho-topo {
+    position: relative;
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 24px;
+
+    cursor: pointer;
+}
+
+#contador-carrinho {
+    position: absolute;
+
+    top: -8px;
+    right: -8px;
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: 50%;
+
+    background: red;
+    color: white;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ==============================
+   PRODUTOS
+============================== */
+
+.produtos {
+    padding: 20px;
+}
+
+.lista-produtos {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+
+/* ==============================
+   CARD DO PRODUTO
+============================== */
+
+.produto-card {
+    background: white;
+
+    border-radius: 12px;
+
+    padding: 12px;
+
+    text-align: center;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+
+.produto-card img {
+    width: 100%;
+
+    height: 150px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+}
+
+
+.produto-card h3 {
+    font-size: 16px;
+
+    margin: 12px 0 5px;
+}
+
+
+.preco {
+    font-size: 17px;
+
+    font-weight: bold;
+
+    color: #2563EB;
+
+    margin: 5px 0;
+}
+
+
+.btn-adicionar {
+    width: 100%;
+
+    padding: 10px;
+
+    margin-top: 8px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #2563EB;
+
+    color: white;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+
+.btn-adicionar:active {
+    transform: scale(0.97);
+}
+.produto-clicavel {
+    cursor: pointer;
+}
+
+.produto-clicavel:hover {
+    transform: scale(1.01);
+}

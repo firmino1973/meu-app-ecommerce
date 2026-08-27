@@ -1,0 +1,301 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    color: #222;
+}
+
+
+/* ==============================
+   CABEÇALHO
+============================== */
+
+.cabecalho {
+    height: 70px;
+
+    background: #2563EB;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 20px;
+}
+
+.cabecalho h1 {
+    margin: 0;
+    font-size: 20px;
+}
+
+
+/* ==============================
+   BOTÃO VOLTAR
+============================== */
+
+.voltar {
+    background: none;
+    border: none;
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+
+/* ==============================
+   CARRINHO
+============================== */
+
+.carrinho-topo {
+    position: relative;
+
+    border: none;
+    background: transparent;
+
+    color: white;
+
+    font-size: 24px;
+
+    cursor: pointer;
+}
+
+#contador-carrinho {
+    position: absolute;
+
+    top: -8px;
+    right: -8px;
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: 50%;
+
+    background: red;
+    color: white;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ==============================
+   ÁREA DE DETALHES
+============================== */
+
+.detalhes {
+    padding: 20px;
+}
+
+
+/* ==============================
+   IMAGEM
+============================== */
+
+.produto-imagem {
+    background: white;
+
+    border-radius: 15px;
+
+    padding: 15px;
+
+    text-align: center;
+
+    margin-bottom: 20px;
+}
+
+.produto-imagem img {
+    width: 100%;
+
+    max-width: 400px;
+
+    height: 300px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+}
+
+
+/* ==============================
+   INFORMAÇÕES
+============================== */
+
+.informacoes {
+    background: white;
+
+    border-radius: 15px;
+
+    padding: 20px;
+}
+
+.informacoes h2 {
+    margin-top: 0;
+
+    font-size: 24px;
+}
+
+
+.preco {
+    font-size: 24px;
+
+    font-weight: bold;
+
+    color: #2563EB;
+
+    margin: 10px 0;
+}
+
+
+.descricao {
+    color: #666;
+
+    line-height: 1.5;
+
+    margin-bottom: 20px;
+}
+
+
+/* ==============================
+   TAMANHOS
+============================== */
+
+.tamanhos h3,
+.quantidade h3 {
+    font-size: 16px;
+
+    margin-bottom: 10px;
+}
+
+
+.lista-tamanhos {
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+
+.lista-tamanhos button {
+    width: 50px;
+
+    height: 45px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    background: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+
+.lista-tamanhos button:hover {
+    border-color: #2563EB;
+
+    color: #2563EB;
+}
+
+
+/* ==============================
+   QUANTIDADE
+============================== */
+
+.controle-quantidade {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+
+.controle-quantidade button {
+    width: 40px;
+
+    height: 40px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #2563EB;
+
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+
+#quantidade {
+    font-size: 18px;
+
+    font-weight: bold;
+
+    min-width: 25px;
+
+    text-align: center;
+}
+
+
+/* ==============================
+   BOTÃO ADICIONAR
+============================== */
+
+.btn-adicionar {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #2563EB;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.btn-adicionar:hover {
+    transform: scale(1.01);
+}
+/* ==============================
+   TAMANHO SELECIONADO
+============================== */
+
+.lista-tamanhos button.selecionado {
+    background: #2563EB;
+    color: white;
+    border-color: #2563EB;
+
+    font-weight: bold;
+
+    transform: scale(1.05);
+}
+

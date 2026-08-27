@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+}
+
+header {
+    background: #111;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 30px 20px;
+}
+
+.confirmacao {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 35px 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.icone-confirmacao {
+    font-size: 70px;
+    margin-bottom: 15px;
+}
+
+.confirmacao h2 {
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.confirmacao p {
+    color: #555;
+    font-size: 16px;
+}
+
+.resumo-pedido {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f7f7f7;
+    border-radius: 12px;
+    text-align: left;
+}
+
+.resumo-pedido h3 {
+    margin-top: 0;
+}
+
+#produtos-pedido p {
+    margin: 8px 0;
+}
+
+#total-pedido {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+    text-align: right;
+}
+
+#total-pedido h3 {
+    margin: 0;
+}
+
+.confirmacao button {
+    margin-top: 25px;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 8px;
+    background: #111;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.confirmacao button:hover {
+    opacity: 0.85;
+}

@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Produtos - Meu App Ecommerce</title>
+
+    <link
+        rel="stylesheet"
+        href="produtos.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+
+    <header class="cabecalho">
+
+        <button
+            class="voltar"
+            onclick="voltarParaHome()"
+        >
+            ←
+        </button>
+
+        <h1 id="titulo-categoria">
+            Produtos
+        </h1>
+
+        <button class="carrinho-topo"
+                onclick="irParaCarrinho()">
+
+            🛒
+
+            <span id="contador-carrinho">
+                0
+            </span>
+
+        </button>
+
+    </header>
+
+
+    <!-- LISTA DE PRODUTOS -->
+
+    <main>
+
+        <section class="produtos">
+
+            <div
+                id="lista-produtos"
+                class="lista-produtos"
+            >
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="produtos.js"></script>
+
+</body>
+
+</html>
+

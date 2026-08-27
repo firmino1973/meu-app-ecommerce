@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Detalhes do Produto</title>
+
+    <link
+        rel="stylesheet"
+        href="detalhes.css"
+    >
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
+        rel="stylesheet"
+    >
+
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+
+    <header class="cabecalho">
+
+        <button
+            class="voltar"
+            onclick="voltarParaProdutos()"
+        >
+            <i class="ri-arrow-left-line"></i>
+        </button>
+
+        <h1>Produto</h1>
+
+        <button
+            class="carrinho-topo"
+            onclick="irParaCarrinho()"
+        >
+
+            <i class="ri-shopping-cart-line"></i>
+
+            <span id="contador-carrinho">
+                0
+            </span>
+
+        </button>
+
+    </header>
+
+
+    <!-- DETALHES DO PRODUTO -->
+
+    <main class="detalhes">
+
+        <div class="produto-imagem">
+
+            <img
+                id="imagem-produto"
+                src=""
+                alt="Produto"
+            >
+
+        </div>
+
+
+        <section class="informacoes">
+
+            <h2 id="nome-produto">
+                Produto
+            </h2>
+
+            <p
+                id="preco-produto"
+                class="preco"
+            >
+                R$ 0,00
+            </p>
+
+
+            <p
+                id="descricao-produto"
+                class="descricao"
+            >
+                Descrição do produto.
+            </p>
+
+
+            <!-- TAMANHOS -->
+
+            <div class="tamanhos">
+
+                <h3>Tamanho</h3>
+
+                <div class="lista-tamanhos">
+
+                    <button>P</button>
+                    <button>M</button>
+                    <button>G</button>
+                    <button>GG</button>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUANTIDADE -->
+
+            <div class="quantidade">
+
+                <h3>Quantidade</h3>
+
+                <div class="controle-quantidade">
+
+                    <button onclick="diminuirQuantidade()">
+                        <i class="ri-subtract-line"></i>
+                    </button>
+
+                    <span id="quantidade">
+                        1
+                    </span>
+
+                    <button onclick="aumentarQuantidade()">
+                        <i class="ri-add-line"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- BOTÃO -->
+
+            <button
+                id="btn-adicionar"
+                class="btn-adicionar"
+            >
+
+                <i class="ri-shopping-cart-line"></i>
+
+                Adicionar ao carrinho
+
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <script src="detalhes.js"></script>
+
+</body>
+
+</html>

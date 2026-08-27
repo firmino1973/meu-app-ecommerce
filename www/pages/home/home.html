@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Home - Meu App Ecommerce</title>
+
+    <link rel="stylesheet" href="home.css">
+
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
+    rel="stylesheet"
+>
+
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+
+<header class="cabecalho">
+
+    <!-- MENU -->
+
+    <button class="menu" id="btn-menu">
+        <i class="ri-menu-line"></i>
+    </button>
+
+
+    <!-- TÍTULO -->
+
+    <h1>Meu App Ecommerce</h1>
+
+
+    <!-- NOTIFICAÇÃO -->
+
+    <button class="notificacao">
+        <i class="ri-notification-3-line"></i>
+    </button>
+
+
+    <!-- CARRINHO -->
+
+    <button class="carrinho-topo" onclick="irParaCarrinho()">
+
+        <i class="ri-shopping-cart-line"></i>
+
+        <span id="contador-carrinho">
+            0
+        </span>
+
+    </button>
+
+</header>
+
+
+    <!-- MENU LATERAL -->
+
+    <aside class="menu-lateral" id="menu-lateral">
+
+        <div class="menu-titulo">
+
+            <h2>Categorias</h2>
+
+            <button id="btn-fechar-menu">
+    
+
+        </div>
+
+
+        <nav class="menu-categorias">
+            
+    <div class="menu-categorias">
+
+    <button onclick="abrirCategoria('camisas')">
+        <i class="ri-t-shirt-line"></i>
+        <span>Camisas</span>
+    </button>
+
+    <button onclick="abrirCategoria('calcas')">
+        <i class="ri-shirt-line"></i>
+        <span>Calças</span>
+    </button>
+
+<button onclick="abrirCategoria('calcados')">
+    <i class="ri-footprint-line"></i>
+    <span>Calçados</span>
+</button>
+
+<button onclick="abrirCategoria('bones')">
+    <i class="ri-user-line"></i>
+    <span>Bonés</span>
+</button>
+
+<button onclick="abrirCategoria('acessorios')">
+    <i class="ri-shopping-bag-line"></i>
+    <span>Acessórios</span>
+</button>
+
+</div>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- FUNDO ESCURO QUANDO O MENU ESTIVER ABERTO -->
+
+    <div class="fundo-menu" id="fundo-menu"></div>
+
+
+    <!-- PESQUISA E BANNER -->
+
+    <section class="pesquisa">
+
+        <section class="banner">
+
+            <div class="banner-conteudo">
+
+                <h2>Ofertas Especiais</h2>
+
+                <p>
+                    Encontre seus produtos favoritos
+                    com preços incríveis!
+                </p>
+
+                <button>Comprar agora</button>
+
+            </div>
+
+        </section>
+
+
+        <input
+            type="text"
+            placeholder="🔍 Pesquisar produtos..."
+        >
+
+    </section>
+
+    <!-- PRODUTOS -->
+
+    <section class="produtos">
+
+        <h2>Produtos em destaque</h2>
+
+        <div class="lista-produtos">
+
+
+            <!-- CAMISETA -->
+
+            <div class="produto-card">
+
+                <div class="produto-imagem">
+
+                    <img
+                        src="../../img/camiseta.jpg"
+                        alt="Camiseta Básica"
+                    >
+
+                </div>
+
+                <h3>Camiseta Básica</h3>
+
+                <p class="preco">
+                    R$ 79,90
+                </p>
+
+                <button
+                    class="btn-adicionar"
+                    data-produto="Camiseta Básica"
+                >
+                    Adicionar
+                </button>
+
+            </div>
+
+
+            <!-- CALÇA -->
+
+            <div class="produto-card">
+
+                <div class="produto-imagem">
+
+                    <img
+                        src="../../img/calca.jpg"
+                        alt="Calça Jeans"
+                    >
+
+                </div>
+
+                <h3>Calça Jeans</h3>
+
+                <p class="preco">
+                    R$ 149,90
+                </p>
+
+                <button
+                    class="btn-adicionar"
+                    data-produto="Calça Jeans"
+                >
+                    Adicionar
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <script src="home.js"></script>
+
+</body>
+
+</html>

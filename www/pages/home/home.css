@@ -1,0 +1,389 @@
+
+/* ==============================
+   PESQUISA
+============================== */
+
+.pesquisa {
+    padding: 15px 20px;
+    background: #f4f6f9;
+}
+
+.pesquisa input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.pesquisa input:focus {
+    border-color: #2563EB;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+
+/* ==============================
+   BANNER
+============================== */
+
+.banner {
+    margin: 10px 20px;
+    padding: 30px 20px;
+    background: #2563EB;
+    color: white;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.banner h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.banner p {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.banner button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    background: white;
+    color: #2563EB;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.banner button:hover {
+    transform: scale(1.03);
+}
+
+
+/* ==============================
+   CABEÇALHO
+============================== */
+
+.cabecalho {
+    height: 70px;
+    background: #2563EB;
+    color: white;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 20px;
+}
+
+.cabecalho h1 {
+    font-size: 22px;
+}
+
+
+/* BOTÃO MENU */
+
+.menu {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+/* BOTÃO NOTIFICAÇÃO */
+
+.notificacao {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+
+/* ==============================
+   MENU LATERAL
+============================== */
+
+.menu-lateral {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 280px;
+    height: 100vh;
+
+    background: white;
+
+    z-index: 1000;
+
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.2);
+
+    transform: translateX(-100%);
+
+    transition: transform 0.3s ease;
+}
+
+
+/* MENU ABERTO */
+
+.menu-lateral.aberto {
+    transform: translateX(0);
+}
+
+
+/* TÍTULO DO MENU */
+
+.menu-titulo {
+    height: 70px;
+
+    background: #2563EB;
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 20px;
+}
+
+.menu-titulo h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.menu-titulo button {
+    background: none;
+    border: none;
+
+    color: white;
+
+    font-size: 24px;
+
+    cursor: pointer;
+}
+
+
+/* ==============================
+   CATEGORIAS DO MENU
+============================== */
+
+.menu-categorias {
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 10px 0;
+}
+
+
+.menu-categorias button {
+
+    width: 100%;
+
+    padding: 18px 25px;
+
+    border: none;
+
+    background: white;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    text-align: left;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+.menu-categorias button:hover {
+
+    background: #f4f6f9;
+}
+
+
+.menu-categorias button span {
+
+    font-size: 17px;
+
+}
+
+
+/* ==============================
+   FUNDO ESCURO DO MENU
+============================== */
+
+.fundo-menu {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    z-index: 999;
+
+    display: none;
+}
+
+
+/* FUNDO VISÍVEL */
+
+.fundo-menu.aberto {
+
+    display: block;
+}
+
+
+/* ==============================
+   PRODUTOS
+============================== */
+
+.produto-imagem {
+
+    font-size: 60px;
+
+    margin-bottom: 15px;
+}
+
+.produto-imagem img {
+
+    width: 100%;
+
+    height: 150px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+}
+
+
+.produto-card {
+
+    min-width: 300px;
+
+    background: white;
+
+    border-radius: 12px;
+
+    padding: 15px;
+
+    text-align: center;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+    box-sizing: border-box;
+
+    flex-shrink: 0;
+}
+
+
+.produto-card button {
+
+    width: 100%;
+
+    padding: 12px;
+
+    margin-top: 10px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+
+.lista-produtos {
+
+    display: flex;
+
+    gap: 15px;
+
+    overflow-x: auto;
+
+    padding: 0 20px 20px;
+}
+
+
+/* ==============================
+   CARRINHO
+============================== */
+
+.carrinho-topo {
+
+    position: relative;
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 24px;
+
+    cursor: pointer;
+}
+
+
+#contador-carrinho {
+
+    position: absolute;
+
+    top: -8px;
+
+    right: -8px;
+
+    width: 20px;
+
+    height: 20px;
+
+    border-radius: 50%;
+
+    background: red;
+
+    color: white;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+.menu-categorias button i {
+    font-size: 24px;
+    width: 30px;
+    text-align: center;
+}
+
+
+

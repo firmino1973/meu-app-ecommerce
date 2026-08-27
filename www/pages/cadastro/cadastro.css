@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+}
+
+.container {
+    width: 90%;
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.container h1 {
+    margin-bottom: 10px;
+}
+
+.container p {
+    color: #555;
+}
+
+#form-cadastro {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+#form-cadastro input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+#form-cadastro input:focus {
+    outline: none;
+    border-color: #111;
+}
+
+#form-cadastro button {
+    margin-top: 10px;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #111;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#form-cadastro button:hover {
+    opacity: 0.85;
+}
+
+.container a {
+    color: #111;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.container a:hover {
+    text-decoration: underline;
+}
