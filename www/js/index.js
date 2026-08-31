@@ -30,5 +30,6 @@ function onDeviceReady() {
         cordova.version
     );
 
-    window.location.href = "pages/login/login.html";
+    window.location.href =
+        "pages/home/home.html";
 }
