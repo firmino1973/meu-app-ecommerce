@@ -98,3 +98,42 @@ main {
     border-radius: 8px;
     cursor: pointer;
 }
+
+.item-carrinho img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.item-carrinho {
+    display: grid;
+    grid-template-columns: 100px 1fr auto auto;
+    grid-template-areas:
+        "imagem info info info"
+        "imagem tamanho quantidade remover";
+    align-items: center;
+    gap: 10px 15px;
+}
+
+.item-carrinho img {
+    grid-area: imagem;
+}
+
+.info-produto {
+    grid-area: info;
+}
+
+.item-carrinho .tamanho {
+    grid-area: tamanho;
+    margin: 0;
+}
+
+.item-carrinho .quantidade {
+    grid-area: quantidade;
+}
+
+.item-carrinho .btn-remover {
+    grid-area: remover;
+    justify-self: start;
+}

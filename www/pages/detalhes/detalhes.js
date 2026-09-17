@@ -1,3 +1,4 @@
+console.log("DETALHES.JS FOI CARREGADO");
 
 /* ==============================
    PEGAR O PRODUTO DA URL
@@ -78,7 +79,7 @@ const produtos = {
 
         preco: 199.90,
 
-        imagem: "../../img/tenis.jpg",
+        imagem: "../../img/imagem.tenis.jpg",
 
         descricao:
             "Tênis casual masculino confortável para o dia a dia."
@@ -92,7 +93,7 @@ const produtos = {
 
         preco: 249.90,
 
-        imagem: "../../img/tenis.jpg",
+        imagem: "../../img/imagem.tenis.jpg",
 
         descricao:
             "Tênis esportivo masculino desenvolvido para conforto e praticidade."
@@ -162,7 +163,7 @@ const produtos = {
    ENCONTRAR PRODUTO
 ============================== */
 
-const produto =
+let produto =
     produtos[produtoSelecionado];
 
 
@@ -190,6 +191,54 @@ const descricaoProduto =
         "descricao-produto"
     );
 
+fetch("http://127.0.0.1:5000/produtos")
+    .then(function(resposta) {
+
+        return resposta.json();
+
+    })
+    .then(function(dados) {
+
+        const produtoApi =
+            dados.produtos.find(function(item) {
+
+                return item.nome === produtoSelecionado;
+
+            });
+
+     if (produtoApi) {
+
+        produto = produtoApi;
+
+    nomeProduto.textContent =
+    produtoApi.nome;    
+
+    precoProduto.textContent =
+        "R$ " +
+        produtoApi.preco
+            .toFixed(2)
+            .replace(".", ",");
+
+
+    imagemProduto.src =
+   imagemProduto.src =
+    "/teste/www/img/" + produtoApi.imagem;
+
+imagemProduto.alt =
+    produtoApi.nome;
+
+descricaoProduto.textContent =
+    produtoApi.descricao;    
+      
+}       
+
+        console.log(
+            "Produto encontrado na API:",
+            produtoApi
+        );
+
+    });    
+
 
 /* ==============================
    MOSTRAR PRODUTO
@@ -200,21 +249,17 @@ if (produto) {
     nomeProduto.textContent =
         produto.nome;
 
-
     precoProduto.textContent =
         "R$ " +
         produto.preco
             .toFixed(2)
             .replace(".", ",");
 
-
     imagemProduto.src =
         produto.imagem;
 
-
     imagemProduto.alt =
         produto.nome;
-
 
     descricaoProduto.textContent =
         produto.descricao;
@@ -314,6 +359,8 @@ botaoAdicionar.addEventListener(
     "click",
     function() {
 
+        console.log("PRODUTO NO CLIQUE:", produto);
+
         if (!produto) {
 
             alert(
@@ -369,6 +416,8 @@ botaoAdicionar.addEventListener(
                 nome: produto.nome,
 
                 preco: produto.preco,
+
+                imagem: produto.imagem,
 
                 tamanho: tamanhoSelecionado,
 

@@ -191,4 +191,100 @@ function abrirCategoria(categoria) {
 
 }
 
+/* ==============================
+   PESQUISA DE PRODUTOS
+============================== */
 
+const campoPesquisa =
+    document.querySelector(".pesquisa input");
+
+const cardsProdutos =
+    document.querySelectorAll(".produto-card");
+
+
+campoPesquisa.addEventListener(
+    "input",
+    function() {
+
+        const textoPesquisa =
+            campoPesquisa.value
+                .toLowerCase()
+                .trim();
+
+
+        cardsProdutos.forEach(
+            function(card) {
+
+                const nomeProduto =
+                    card
+                        .querySelector("h3")
+                        .textContent
+                        .toLowerCase();
+
+
+                if (
+                    nomeProduto.includes(
+                        textoPesquisa
+                    )
+                ) {
+
+                    card.style.display =
+                        "";
+
+                } else {
+
+                    card.style.display =
+                        "none";
+
+                }
+
+            }
+        );
+
+    }
+);
+
+    const listaProdutos = document.getElementById("lista-produtos");
+
+    console.log(listaProdutos);
+
+fetch("http://127.0.0.1:5000/produtos")
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(dados) {
+        dados.produtos.forEach(function(produto) {
+           console.log(produto.nome);
+
+           const card = document.createElement("div");
+           card.className = "produto-card";
+
+           const imagem = produto.imagem ? `
+            <div class="produto-imagem">
+              <img src="../../img/${produto.imagem}">
+        </div>
+` : "";
+           
+           card.innerHTML = `
+             ${imagem}
+       <h3>${produto.nome}</h3>
+       <p>R$ ${produto.preco}</p>
+       <button class="btn-adicionar" data-produto="${produto.nome}">
+    Adicionar
+</button>
+`;
+
+const botao = card.querySelector(".btn-adicionar");
+
+botao.addEventListener("click", function() {
+    const nome = botao.dataset.produto;
+
+    abrirDetalhes(nome);
+});
+
+ listaProdutos.appendChild(card);
+     });
+    
+ });
+
+    

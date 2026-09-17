@@ -59,54 +59,52 @@
 </header>
 
 
-    <!-- MENU LATERAL -->
+<!-- MENU LATERAL -->
 
-    <aside class="menu-lateral" id="menu-lateral">
+<aside class="menu-lateral" id="menu-lateral">
 
-        <div class="menu-titulo">
+    <div class="menu-titulo">
 
-            <h2>Categorias</h2>
+        <h2>Categorias</h2>
 
-            <button id="btn-fechar-menu">
-    
+        <button id="btn-fechar-menu">
+            <i class="ri-close-line"></i>
+        </button>
 
-        </div>
+    </div>
 
 
-        <nav class="menu-categorias">
-            
-    <div class="menu-categorias">
+    <nav class="menu-categorias">
 
-    <button onclick="abrirCategoria('camisas')">
-        <i class="ri-t-shirt-line"></i>
-        <span>Camisas</span>
-    </button>
+        <button onclick="abrirCategoria('camisas')">
+            <i class="ri-t-shirt-line"></i>
+            <span>Camisas</span>
+        </button>
 
-    <button onclick="abrirCategoria('calcas')">
-        <i class="ri-shirt-line"></i>
-        <span>Calças</span>
-    </button>
+        <button onclick="abrirCategoria('calcas')">
+            <i class="ri-shirt-line"></i>
+            <span>Calças</span>
+        </button>
 
-<button onclick="abrirCategoria('calcados')">
-    <i class="ri-footprint-line"></i>
-    <span>Calçados</span>
-</button>
+        <button onclick="abrirCategoria('calcados')">
+            <i class="ri-footprint-line"></i>
+            <span>Calçados</span>
+        </button>
 
-<button onclick="abrirCategoria('bones')">
-    <i class="ri-user-line"></i>
-    <span>Bonés</span>
-</button>
+        <button onclick="abrirCategoria('bones')">
+            <i class="ri-user-line"></i>
+            <span>Bonés</span>
+        </button>
 
-<button onclick="abrirCategoria('acessorios')">
-    <i class="ri-shopping-bag-line"></i>
-    <span>Acessórios</span>
-</button>
+        <button onclick="abrirCategoria('acessorios')">
+            <i class="ri-shopping-bag-line"></i>
+            <span>Acessórios</span>
+        </button>
 
-</div>
+    </nav>
 
-        </nav>
+</aside>
 
-    </aside>
 
 
     <!-- FUNDO ESCURO QUANDO O MENU ESTIVER ABERTO -->
@@ -114,32 +112,46 @@
     <div class="fundo-menu" id="fundo-menu"></div>
 
 
-    <!-- PESQUISA E BANNER -->
+<!-- ==============================
+     PESQUISA
+============================== -->
 
-    <section class="pesquisa">
+<section class="pesquisa">
 
-        <section class="banner">
+    <div class="campo-pesquisa">
 
-            <div class="banner-conteudo">
-
-                <h2>Ofertas Especiais</h2>
-
-                <p>
-                    Encontre seus produtos favoritos
-                    com preços incríveis!
-                </p>
-
-                <button>Comprar agora</button>
-
-            </div>
-
-        </section>
-
+        <i class="ri-search-line"></i>
 
         <input
             type="text"
-            placeholder="🔍 Pesquisar produtos..."
+            placeholder="Pesquisar produtos..."
         >
+
+    </div>
+
+</section>
+
+
+<!-- ==============================
+     BANNER
+============================== -->
+
+<section class="banner">
+
+    <div class="banner-conteudo">
+
+        <h2>Ofertas Especiais</h2>
+
+        <p>
+            Encontre seus produtos favoritos
+            com preços incríveis!
+        </p>
+
+        <button>
+            Comprar agora
+        </button>
+
+    </div>
 
     </section>
 
@@ -149,65 +161,7 @@
 
         <h2>Produtos em destaque</h2>
 
-        <div class="lista-produtos">
-
-
-            <!-- CAMISETA -->
-
-            <div class="produto-card">
-
-                <div class="produto-imagem">
-
-                    <img
-                        src="../../img/camiseta.jpg"
-                        alt="Camiseta Básica"
-                    >
-
-                </div>
-
-                <h3>Camiseta Básica</h3>
-
-                <p class="preco">
-                    R$ 79,90
-                </p>
-
-                <button
-                    class="btn-adicionar"
-                    data-produto="Camiseta Básica"
-                >
-                    Adicionar
-                </button>
-
-            </div>
-
-
-            <!-- CALÇA -->
-
-            <div class="produto-card">
-
-                <div class="produto-imagem">
-
-                    <img
-                        src="../../img/calca.jpg"
-                        alt="Calça Jeans"
-                    >
-
-                </div>
-
-                <h3>Calça Jeans</h3>
-
-                <p class="preco">
-                    R$ 149,90
-                </p>
-
-                <button
-                    class="btn-adicionar"
-                    data-produto="Calça Jeans"
-                >
-                    Adicionar
-                </button>
-
-            </div>
+        <div class="lista-produtos" id="lista-produtos">
 
 
         </div>

@@ -8,14 +8,48 @@
     background: #f4f6f9;
 }
 
-.pesquisa input {
+.campo-pesquisa {
+    position: relative;
     width: 100%;
-    padding: 14px 16px;
+}
+
+.campo-pesquisa i {
+    position: absolute;
+
+    left: 16px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #777;
+
+    font-size: 20px;
+
+    pointer-events: none;
+}
+
+.campo-pesquisa input {
+    width: 100%;
+
+    padding: 14px 16px 14px 46px;
+
     border: 1px solid #ddd;
+
     border-radius: 10px;
+
     font-size: 16px;
+
     outline: none;
+
     box-sizing: border-box;
+}
+
+.campo-pesquisa input:focus {
+    border-color: #2563EB;
+
+    box-shadow:
+        0 0 0 2px
+        rgba(37, 99, 235, 0.15);
 }
 
 .pesquisa input:focus {
@@ -29,37 +63,71 @@
 ============================== */
 
 .banner {
-    margin: 10px 20px;
-    padding: 30px 20px;
-    background: #2563EB;
+    margin: 10px 20px 20px;
+
+    padding: 28px 22px;
+
+    background: linear-gradient(
+        135deg,
+        #2563EB,
+        #1D4ED8
+    );
+
     color: white;
-    border-radius: 15px;
-    text-align: center;
+
+    border-radius: 16px;
+
+    text-align: left;
+
+    box-shadow:
+        0 4px 12px
+        rgba(0, 0, 0, 0.15);
+
+    box-sizing: border-box;
+}
+
+.banner-conteudo {
+    max-width: 500px;
 }
 
 .banner h2 {
-    margin-bottom: 10px;
-    font-size: 24px;
+    margin: 0 0 8px;
+
+    font-size: 25px;
+
+    font-weight: 700;
 }
 
 .banner p {
-    margin-bottom: 20px;
+    margin: 0 0 20px;
+
     font-size: 16px;
+
+    line-height: 1.5;
 }
 
 .banner button {
-    padding: 12px 24px;
+    padding: 12px 22px;
+
     border: none;
-    border-radius: 8px;
+
+    border-radius: 9px;
+
     background: white;
+
     color: #2563EB;
-    font-size: 16px;
-    font-weight: bold;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
     cursor: pointer;
+
+    transition: transform 0.2s ease;
 }
 
 .banner button:hover {
-    transform: scale(1.03);
+    transform: translateY(-2px);
 }
 
 
@@ -68,43 +136,72 @@
 ============================== */
 
 .cabecalho {
-    height: 70px;
+    height: 64px;
+
     background: #2563EB;
     color: white;
 
     display: flex;
-    flex-direction: row;
-
-    justify-content: space-between;
     align-items: center;
 
-    padding: 0 20px;
+    padding: 0 16px;
+
+    box-sizing: border-box;
 }
 
 .cabecalho h1 {
-    font-size: 22px;
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    flex: 1;
+    text-align: center;
+    white-space: nowrap;
 }
 
 
 /* BOTÃO MENU */
 
 .menu {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     background: none;
     border: none;
+
     color: white;
-    font-size: 28px;
+
+    font-size: 26px;
+
     cursor: pointer;
+
+    flex-shrink: 0;
 }
 
 
 /* BOTÃO NOTIFICAÇÃO */
 
 .notificacao {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     background: none;
     border: none;
+
     color: white;
+
     font-size: 22px;
+
     cursor: pointer;
+
+    flex-shrink: 0;
 }
 
 

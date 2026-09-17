@@ -34,9 +34,13 @@ carrinho.forEach(function(produto) {
 
    
 item.innerHTML = `
-    <h3>${produto.nome}</h3>
+    <img src="../../img/${produto.imagem}" alt="${produto.nome}">
 
-    <p>Preço: R$ ${produto.preco.toFixed(2).replace(".", ",")}</p>
+    <div class="info-produto">
+        <h3>${produto.nome}</h3>
+
+        <p>Preço: R$ ${produto.preco.toFixed(2).replace(".", ",")}</p>
+    </div>
 
     <p class="tamanho">
         Tamanho: ${produto.tamanho || "Não informado"}
@@ -51,6 +55,7 @@ item.innerHTML = `
         <button class="btn-aumentar">+</button>
 
     </div>
+
     <button class="btn-remover">Remover</button>
 `;
   const btnRemover = item.querySelector(".btn-remover");
