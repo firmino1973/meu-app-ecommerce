@@ -90,6 +90,45 @@ def cadastrar_cliente():
         "cliente_id": cursor.lastrowid
     }, 201
 
+@app.route("/login", methods=["POST"])
+def login():
+    dados = request.get_json()
+
+    email = dados.get("email")
+    senha = dados.get("senha")
+
+    if not email or not senha:
+        return {
+            "erro": "Email e senha são obrigatórios"
+        }, 400
+
+    conexao = conectar_banco()
+    cursor = conexao.cursor()
+
+    cursor.execute(
+        "SELECT id, nome, email, senha_hash FROM clientes WHERE email = ?",
+        (email,)
+    )
+
+    cliente = cursor.fetchone()
+
+    conexao.close()
+
+    if not cliente:
+        return {
+            "erro": "Email ou senha inválidos"
+        }, 401
+
+    if not check_password_hash(cliente[3], senha):
+        return {
+            "erro": "Email ou senha inválidos"
+        }, 401
+
+    return {
+        "mensagem": "Login realizado com sucesso",
+        "cliente_id": cliente[0],
+        "nome": cliente[1]
+    }, 200
 
 if __name__ == "__main__":
       app.run(debug=False)
