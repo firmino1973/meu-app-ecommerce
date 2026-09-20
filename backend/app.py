@@ -7,7 +7,9 @@ app = Flask(__name__)
 
 
 def conectar_banco():
-    return sqlite3.connect("ecommerce.db")
+    conexao = sqlite3.connect("ecommerce.db")
+    conexao.execute("PRAGMA foreign_keys = ON")
+    return conexao
 
 
 CORS(app)
