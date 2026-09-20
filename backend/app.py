@@ -21,7 +21,6 @@ CORS(app)
 def inicio():
     return "Backend Meu App Ecommerce funcionando!"
 
-
 @app.route("/produtos")
 def produtos():
     conexao = conectar_banco()
@@ -48,6 +47,40 @@ def produtos():
 
     return {
         "produtos": lista_produtos
+    }
+
+
+@app.route("/clientes", methods=["POST"])
+def cadastrar_cliente():
+    dados = request.get_json()
+
+    nome = dados.get("nome")
+    email = dados.get("email")
+    telefone = dados.get("telefone")
+    senha = dados.get("senha")
+
+    if not nome or not email or not senha:
+     return {
+        "erro": "Nome, email e senha são obrigatórios"
+    }, 400
+
+    senha_hash = generate_password_hash(senha)
+    conexao = conectar_banco()
+
+    cursor = conexao.cursor()
+
+    cursor.execute("""
+    INSERT INTO clientes (nome, email, telefone, senha_hash)
+    VALUES (?, ?, ?, ?)
+""", (nome, email, telefone, senha_hash))
+
+    conexao.commit()
+    conexao.close()
+
+
+    return {
+        "mensagem": "Dados recebidos",
+        "dados": dados
     }
 
 
