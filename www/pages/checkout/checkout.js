@@ -1,3 +1,29 @@
+const token = localStorage.getItem("token");
+
+if (!token) {
+    alert("Você precisa fazer login para continuar.");
+    window.location.href = "../login/login.html";
+}
+fetch("http://127.0.0.1:5000/perfil", {
+    headers: {
+        "Authorization": "Bearer " + token
+    }
+})
+.then(function(resposta) {
+    return resposta.json();
+})
+.then(function(dados) {
+
+    document.getElementById("nome").value = dados.nome;
+    document.getElementById("email").value = dados.email;
+    document.getElementById("telefone").value = dados.telefone;
+
+})
+.catch(function(erro) {
+    console.error("Erro ao carregar perfil:", erro);
+});
+
+
 const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 
 const resumoProdutos = document.getElementById("resumo-produtos");
