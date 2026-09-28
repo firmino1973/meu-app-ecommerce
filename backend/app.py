@@ -270,6 +270,46 @@ def criar_pedido():
         "total": total
     }, 201
 
+@app.route("/pedidos", methods=["GET"])
+def listar_pedidos():
+
+    dados = verificar_token()
+
+    if not dados:
+        return {
+            "erro": "Token inválido ou não informado"
+        }, 401
+
+    cliente_id = dados["cliente_id"]
+
+    conexao = conectar_banco()
+    cursor = conexao.cursor()
+
+    cursor.execute("""
+        SELECT id, data, total, status
+        FROM pedidos
+        WHERE cliente_id = ?
+        ORDER BY id DESC
+    """, (cliente_id,))
+
+    registros = cursor.fetchall()
+
+    conexao.close()
+
+    pedidos = []
+
+    for pedido in registros:
+        pedidos.append({
+            "id": pedido[0],
+            "data": pedido[1],
+            "total": pedido[2],
+            "status": pedido[3]
+        })
+
+    return {
+        "pedidos": pedidos
+    }, 200    
+
 
 if __name__ == "__main__":
     app.run(debug=False)
